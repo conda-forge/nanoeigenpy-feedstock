@@ -5,6 +5,8 @@ rd /q /s build
 mkdir build
 cd build
 
+set "CC=clang-cl.exe"
+set "CXX=clang-cl.exe"
 
 ::Configure
 cmake ^
