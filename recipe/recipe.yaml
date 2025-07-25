@@ -1,6 +1,6 @@
 context:
   name: nanoeigenpy
-  version: "0.3.0"
+  version: "0.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/Simple-Robotics/${{ name }}/releases/download/v${{ version }}/nanoeigenpy-${{ version }}.tar.gz
-  sha256: 28772040a9fe7dcdf6c95af658c305b8ad3be543591c4e361aad57e630a268f7
+  sha256: a5823c086c65a13bfa32956cd838cede67d72a89faaf1fea2a24bd2d7ea20463
 
 build:
   number: 0
