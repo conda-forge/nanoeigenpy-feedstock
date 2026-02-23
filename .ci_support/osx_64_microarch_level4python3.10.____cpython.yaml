@@ -17,9 +17,9 @@ cxx_compiler_version:
 libcholmod:
 - '5'
 macos_machine:
-- arm64-apple-darwin20.0.0
+- x86_64-apple-darwin13.4.0
 microarch_level:
-- '1'
+- '4'
 numpy:
 - '2'
 pin_run_as_build:
@@ -27,6 +27,6 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.14.* *_cp314
+- 3.10.* *_cpython
 target_platform:
-- osx-arm64
+- osx-64

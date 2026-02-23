@@ -8,6 +8,8 @@ cxx_compiler:
 - clang
 libcholmod:
 - '5'
+microarch_level:
+- '1'
 numpy:
 - '2'
 pin_run_as_build:
