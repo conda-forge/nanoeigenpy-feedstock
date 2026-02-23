@@ -1,6 +1,7 @@
 context:
   name: nanoeigenpy
   version: "0.4.0"
+  build: 2
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +12,12 @@ source:
   sha256: a5823c086c65a13bfa32956cd838cede67d72a89faaf1fea2a24bd2d7ea20463
 
 build:
-  number: 2
+  number: ${{ build + 100 * (microarch_level|default(1)|int - 1) }}
 
 requirements:
   build:
+    - if: unix and x86_64
+      then: x86_64-microarch-level ==${{ microarch_level }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - cmake

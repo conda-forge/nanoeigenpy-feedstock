@@ -18,6 +18,8 @@ libcholmod:
 - '5'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+microarch_level:
+- '3'
 numpy:
 - '2'
 pin_run_as_build:
