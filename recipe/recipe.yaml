@@ -1,7 +1,7 @@
 context:
   name: nanoeigenpy
   version: "0.4.0"
-  build: 2
+  build: 3
 
 package:
   name: ${{ name|lower }}
@@ -29,6 +29,8 @@ requirements:
         - cross-python_${{ target_platform }}
         - numpy
   host:
+    - if: unix and x86_64
+      then: x86_64-microarch-level ==${{ microarch_level }}
     - eigen
     - eigen-abi-devel
     - python
