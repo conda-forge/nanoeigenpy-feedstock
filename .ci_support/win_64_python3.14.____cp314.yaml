@@ -11,7 +11,7 @@ eigen_abi_devel:
 libcholmod:
 - '5'
 microarch_level:
-- '1'
+- 1
 numpy:
 - '2'
 pin_run_as_build:
