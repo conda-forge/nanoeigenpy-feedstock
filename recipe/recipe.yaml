@@ -10,6 +10,8 @@ package:
 source:
   url: https://github.com/Simple-Robotics/${{ name }}/releases/download/v${{ version }}/nanoeigenpy-${{ version }}.tar.gz
   sha256: 4e5aff42b9f2608adf7864ed9f9bd384c515ec7af618caea53e883d5004af821
+  patches:
+    - patches/0001-cmake-Allow-all-nanobind-version-in-CMake.patch
 
 build:
   number: ${{ build + 100 * (microarch_level|default(1)|int - 1) }}
@@ -37,6 +39,7 @@ requirements:
     - numpy
     - libcholmod
     - nanobind
+    - nanobind-abi
   run:
     - python
 

@@ -1,0 +1,25 @@
+From 36143b8696039fc4469178db7409e9b3dcd6b90a Mon Sep 17 00:00:00 2001
+From: Joris Vaillant <joris.vaillant@inria.fr>
+Date: Tue, 1 Sep 2026 11:15:32 +0200
+Subject: [PATCH] cmake: Allow all nanobind version in CMake
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index af1a6e3..df19725 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -112,7 +112,7 @@ execute_process(
+   OUTPUT_STRIP_TRAILING_WHITESPACE
+   OUTPUT_VARIABLE nanobind_ROOT
+ )
+-find_package(nanobind 2.5.0 CONFIG)
++find_package(nanobind CONFIG)
+ if(NOT nanobind_FOUND)
+   add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/ext/nanobind)
+ endif()
+-- 
+2.55.0
+
