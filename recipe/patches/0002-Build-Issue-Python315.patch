@@ -1,0 +1,25 @@
+From 3e7c9d10f6423f6a0eee27c92f7438da2d0a7576 Mon Sep 17 00:00:00 2001
+From: Joris Vaillant <joris.vaillant@inria.fr>
+Date: Mon, 21 Sep 2026 17:10:15 +0200
+Subject: [PATCH] Find Development.Module
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index df19725..c02a4a0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -100,7 +100,7 @@ endif(APPLE)
+ # Find dependencies
+ ADD_PROJECT_DEPENDENCY(Eigen3 REQUIRED PKG_CONFIG_REQUIRES "eigen3 >= 3.3.1")
+ 
+-find_package(Python REQUIRED COMPONENTS Interpreter Development)
++find_package(Python REQUIRED COMPONENTS Interpreter Development.Module)
+ # On Windows Python_SITELIB contains \ that can create installation issues
+ if(WIN32)
+   string(REPLACE "\\" "/" Python_SITELIB "${Python_SITELIB}")
+-- 
+2.55.0
+
